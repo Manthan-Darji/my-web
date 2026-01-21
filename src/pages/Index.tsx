@@ -213,7 +213,7 @@ const Index = () => {
             amount: 0.4
           }} transition={{
             duration: 0.4
-          }} className="rounded-2xl border bg-card/30 p-6">
+          }} className="rounded-2xl border bg-card/30 p-6 lg:col-span-2">
               <p className="text-xs text-muted-foreground">terminal</p>
               <p className="mt-3 text-sm">
                 <span className="text-neon-green">$</span> echo "Let’s build something that matters."
