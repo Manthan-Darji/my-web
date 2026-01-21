@@ -127,8 +127,8 @@ I am driven by a relentless curiosity In Tech , whether it's System Architecture
         </Section>
 
         <Section id="contacts" title="Contacts" kicker="ping-me">
-          <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <NeonCard className="p-6">
+          <div className="mx-auto grid max-w-5xl gap-4 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <NeonCard className="p-6 text-center">
               <p className="text-sm text-muted-foreground">
                 I’m interested in freelance opportunities. However, if you have other requests or questions, don’t hesitate to contact me.
               </p>
@@ -136,12 +136,12 @@ I am driven by a relentless curiosity In Tech , whether it's System Architecture
                 <span className="text-neon-purple">//</span> Always ready to team up for something that actually Matters.
               </p>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-lg border bg-background/30 p-4">
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 sm:text-left">
+                <div className="rounded-lg border bg-background/30 p-4 text-center sm:text-left">
                   <p className="text-xs text-muted-foreground">Email</p>
                   <a className="mt-2 block text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan22@gmail.com</a>
                 </div>
-                <div className="rounded-lg border bg-background/30 p-4">
+                <div className="rounded-lg border bg-background/30 p-4 text-center sm:text-left">
                   <p className="text-xs text-muted-foreground">Discord</p>
                   <p className="mt-2 text-sm text-foreground">manthan_darji</p>
                 </div>
@@ -159,7 +159,7 @@ I am driven by a relentless curiosity In Tech , whether it's System Architecture
             amount: 0.4
           }} transition={{
             duration: 0.4
-          }} className="rounded-2xl border bg-card/30 p-6">
+          }} className="rounded-2xl border bg-card/30 p-6 text-center">
               <p className="text-xs text-muted-foreground">terminal</p>
               <p className="mt-3 text-sm">
                 <span className="text-neon-green">$</span> echo "Let’s build something that matters."
