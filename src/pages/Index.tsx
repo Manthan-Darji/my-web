@@ -76,14 +76,28 @@ const Index = () => {
         </Section>
 
         <Section id="skills" title="Skills" kicker="stack">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Gen-AI</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {[
-                  "Prompt engineering",
-                  "Gemini",
-                  "LLM workflows",
+                  "Prompt Engineering",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-2">
+                    <span className="text-neon-green">*</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </NeonCard>
+
+            <NeonCard className="p-6">
+              <p className="text-xs text-muted-foreground">Core</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "C Prog.",
+                  "Python",
+                  "Java",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
@@ -99,7 +113,6 @@ const Index = () => {
                 {[
                   "Linux",
                   "Git & GitHub",
-                  "CLI-first workflow",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
@@ -114,8 +127,8 @@ const Index = () => {
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {[
                   "Communication",
-                  "First-principles thinking",
-                  "Problem breakdown",
+                  "First Principle Thinkings",
+                  "Problem Breakdown",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
