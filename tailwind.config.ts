@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
+        neon: {
+          purple: "hsl(var(--primary))",
+          green: "hsl(var(--primary-2))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +85,23 @@ export default {
             height: "0",
           },
         },
+
+        "caret-blink": {
+          "0%, 49%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
+        },
+
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.55" },
+          "50%": { opacity: "0.9" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+        "caret-blink": "caret-blink 1.05s steps(2, end) infinite",
+        "glow-pulse": "glow-pulse 2.6s ease-in-out infinite",
       },
     },
   },
