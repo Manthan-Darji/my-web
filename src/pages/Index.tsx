@@ -90,7 +90,7 @@ const Index = () => {
             </NeonCard>
             <NeonCard>
               <p className="text-xs text-muted-foreground">Core</p>
-              <p className="mt-2 text-sm">C Prog., Python, Java</p>
+              <p className="mt-2 text-sm">C Prog., Python, Java, SQL</p>
             </NeonCard>
             <NeonCard>
               <p className="text-xs text-muted-foreground">Systems</p>
