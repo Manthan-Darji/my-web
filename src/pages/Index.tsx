@@ -111,7 +111,7 @@ I am driven by a relentless curiosity In Tech , whether it's System Architecture
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Fun Facts</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["My coding playlist is heavier than my backend logic", "I prefer the terminal over a GUI any day", "Coffee doesn't wake me up. A compilation error does"].map(t => <li key={t} className="flex gap-2">
+                {["My Music playlist is heavier than my backend logic", "Coffee doesn't wake me up. A compilation error does", "I Am More of a Lazy Guy"].map(t => <li key={t} className="flex gap-2">
                     <span className="text-neon-green">*</span>
                     <span>{t}</span>
                   </li>)}
