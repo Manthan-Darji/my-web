@@ -82,6 +82,8 @@ const Index = () => {
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {[
                   "Prompt Engineering",
+                  "LLMs",
+                  "AI App Building",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
