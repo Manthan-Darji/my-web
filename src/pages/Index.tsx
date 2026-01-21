@@ -181,8 +181,9 @@ const Index = () => {
         </Section>
 
         <Section id="contacts" title="Contacts" kicker="ping-me">
-          <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <NeonCard className="p-6">
+          <div className="mx-auto w-full max-w-4xl">
+            <div className="grid gap-4">
+            <NeonCard className="mx-auto w-full max-w-3xl p-7">
               <p className="text-sm text-muted-foreground">
                 I’m interested in freelance opportunities. However, if you have other requests or questions, don’t hesitate to contact me.
               </p>
@@ -213,7 +214,7 @@ const Index = () => {
             amount: 0.4
           }} transition={{
             duration: 0.4
-          }} className="rounded-2xl border bg-card/30 p-6 lg:col-span-2">
+          }} className="mx-auto w-full max-w-2xl rounded-2xl border bg-card/30 p-5">
               <p className="text-xs text-muted-foreground">terminal</p>
               <p className="mt-3 text-sm">
                 <span className="text-neon-green">$</span> echo "Let’s build something that matters."
@@ -223,6 +224,7 @@ const Index = () => {
                 Back to top
               </button>
             </motion.div>
+            </div>
           </div>
         </Section>
       </main>
