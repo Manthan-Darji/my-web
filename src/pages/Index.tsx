@@ -103,8 +103,8 @@ I am driven by a relentless curiosity In Tech , whether it's System Architecture
         </Section>
 
         <Section id="about" title="About Me" kicker="first-principles">
-          <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <NeonCard className="p-6">
+          <div className="mx-auto grid max-w-4xl gap-5">
+            <NeonCard className="p-6 text-center">
               <p className="text-sm leading-relaxed text-muted-foreground">I don’t just write code. I question it. 
 
 
@@ -114,15 +114,19 @@ My approach is simple but rare: First Principles Thinking. While the herd follow
 I am driven by a relentless curiosity In Tech , whether it's System Architecture or Gen-AI, I dig deep until I find the 'why' behind the 'how'. I don't settle for 'it works'. I need to know why it works.</p>
             </NeonCard>
 
-            <NeonCard className="p-6">
+            <div className="mt-1">
               <p className="text-xs text-muted-foreground">Fun Facts</p>
-              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["My coding playlist is heavier than my backend logic", "I prefer the terminal over a GUI any day", "Coffee doesn't wake me up. A compilation error does"].map(t => <li key={t} className="flex gap-2">
-                    <span className="text-neon-green">*</span>
-                    <span>{t}</span>
-                  </li>)}
-              </ul>
-            </NeonCard>
+              <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                {["My Music playlist is heavier than my backend logic", "Coffee doesn't wake me up. A compilation error does", "I Am More of a Lazy Guy"].map(t => (
+                  <div
+                    key={t}
+                    className="rounded-lg border bg-background/30 p-4 text-center text-sm text-muted-foreground transition hover:neon-ring hover:text-foreground"
+                  >
+                    <span className="text-neon-green">*</span> {t}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </Section>
 
