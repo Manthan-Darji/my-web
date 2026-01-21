@@ -76,25 +76,53 @@ const Index = () => {
         </Section>
 
         <Section id="skills" title="Skills" kicker="stack">
-          <div className="grid gap-4 md:grid-cols-2">
-            <NeonCard>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Gen-AI</p>
-              <p className="mt-2 text-sm">Prompt Engineering, Gemini</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Prompt engineering",
+                  "Gemini",
+                  "LLM workflows",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-2">
+                    <span className="text-neon-green">*</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
             </NeonCard>
-            
-            <NeonCard>
+
+            <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Systems</p>
-              <p className="mt-2 text-sm">Linux, GitHub</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Linux",
+                  "Git & GitHub",
+                  "CLI-first workflow",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-2">
+                    <span className="text-neon-green">*</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
             </NeonCard>
-            <NeonCard>
-              <p className="text-xs text-muted-foreground">I don’t just write code.
 
-
-I question it.  My approach is simple but rare: First Principles Thinking. While the herd follows tutorials step-by-step, I prefer breaking things to understand how they work from the core.
-
-
-I am driven by a relentless curiosity In Tech , whether it's System Architecture or Gen-AI, I dig deep until I find the 'why' behind the 'how'. I don't settle for 'it works'. I need to know why it works.</p>
-              <p className="mt-2 text-sm">Communication</p>
+            <NeonCard className="p-6">
+              <p className="text-xs text-muted-foreground">Soft Skills</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Communication",
+                  "First-principles thinking",
+                  "Problem breakdown",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-2">
+                    <span className="text-neon-green">*</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
             </NeonCard>
           </div>
         </Section>
