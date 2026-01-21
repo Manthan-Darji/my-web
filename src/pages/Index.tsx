@@ -5,6 +5,7 @@ import { NeonCard } from "@/components/portfolio/NeonCard";
 import { PortfolioFooter } from "@/components/portfolio/PortfolioFooter";
 import { PortfolioNavbar } from "@/components/portfolio/PortfolioNavbar";
 import { Section } from "@/components/portfolio/Section";
+import { MiniTerminalGame } from "@/components/portfolio/MiniTerminalGame";
 import { usePointerGlow } from "@/components/portfolio/usePointerGlow";
 
 const Index = () => {
@@ -160,27 +161,41 @@ const Index = () => {
                 </div>
               </div>
             </NeonCard>
+          </div>
+        </Section>
 
+        <Section id="terminal" title="Terminal" kicker="playground">
+          <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.4 }}
               className="rounded-2xl border bg-card/30 p-6"
             >
-              <p className="text-xs text-muted-foreground">terminal</p>
-              <p className="mt-3 text-sm">
-                <span className="text-neon-green">$</span> echo "Let’s build something that matters !"
+              <p className="text-sm text-muted-foreground">
+                A tiny interactive CLI to end the page with something less boring. Type <span className="text-neon-green">help</span>.
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">Let’s build something that matters !</p>
-              <button
-                type="button"
-                onClick={() => scrollTo("home")}
-                className="mt-5 w-full rounded-lg border bg-secondary/40 px-4 py-2 text-sm text-muted-foreground transition hover:neon-ring hover:text-foreground"
-              >
-                Back to top
-              </button>
+              <div className="mt-4">
+                <MiniTerminalGame onBackToTop={() => scrollTo("home")} />
+              </div>
             </motion.div>
+
+            <NeonCard className="p-6">
+              <p className="text-xs text-muted-foreground">quick notes</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Try: help, whoami, socials, clear",
+                  "Start a game: play guess",
+                  "Exit the game anytime: exit",
+                ].map((t) => (
+                  <li key={t} className="flex gap-2">
+                    <span className="text-neon-purple">&gt;</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </NeonCard>
           </div>
         </Section>
       </main>
