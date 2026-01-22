@@ -50,9 +50,7 @@ const Index = () => {
               <h3 className="mt-2 text-base font-semibold">
                 Google Student Ambassador <span className="text-neon-green">(Completed)</span>
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Built community, learned leadership, shipped initiatives.
-              </p>
+              <p className="mt-2 text-sm text-muted-foreground">Built community, learned leadership, shipped initiatives , and stepped out of my comfort zone.</p>
             </NeonCard>
           </div>
         </Section>
