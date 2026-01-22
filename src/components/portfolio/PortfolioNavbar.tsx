@@ -47,6 +47,14 @@ export function PortfolioNavbar() {
               className="group inline-flex items-baseline gap-2 text-sm font-semibold tracking-tight"
               aria-label="Go to Home"
             >
+               <img
+                 src="/favicon.png"
+                 width={16}
+                 height={16}
+                 alt="Manthan portfolio icon"
+                 className="relative top-[1px] mr-1 inline-block h-4 w-4 rounded-sm"
+                 loading="eager"
+               />
               <span className="text-neon-purple">{`>`}</span>
               <span className="transition-colors group-hover:text-neon-green">
                 Manthan
