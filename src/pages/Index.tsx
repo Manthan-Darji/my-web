@@ -180,8 +180,7 @@ const Index = () => {
               duration: 0.4
             }} className="mx-auto w-full max-w-2xl rounded-2xl border bg-card/30 p-5">
               <p className="text-xs text-muted-foreground">terminal</p>
-              <p className="mt-3 text-sm">$ echo "Let’s build something that matters !"<span className="text-neon-green">$</span> echo "Let’s build something that matters."
-              </p>
+              <p className="mt-3 text-sm">$ echo "Let’s build something that matters !"</p>
               <p className="mt-2 text-sm text-muted-foreground">Let’s build something that matters !</p>
               <button type="button" onClick={() => scrollTo("home")} className="mt-5 w-full rounded-lg border bg-secondary/40 px-4 py-2 text-sm text-muted-foreground transition hover:neon-ring hover:text-foreground">
                 Back to top
