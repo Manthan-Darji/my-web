@@ -68,9 +68,7 @@ const Index = () => {
             </NeonCard>
             <NeonCard>
               <h3 className="text-base font-semibold">Small Projects</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                “ Vo Bhi Bana Lenge , Time to Do 😅 ”
-              </p>
+              <p className="mt-2 text-sm text-muted-foreground">Work Under Construction 🚧</p>
             </NeonCard>
           </div>
         </Section>
@@ -80,63 +78,40 @@ const Index = () => {
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Gen-AI</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {[
-                  "Prompt Engineering",
-                  "LLMs",
-                  "AI App Building",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
+                {["Prompt Engineering", "LLMs", "AI App Building"].map(t => <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
                     <span>{t}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </NeonCard>
 
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Core</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {[
-                  "C Prog.",
-                  "Python",
-                  "Java",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
+                {["C Prog.", "Python", "Java"].map(t => <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
                     <span>{t}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </NeonCard>
 
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Systems</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {[
-                  "Linux",
-                  "Git & GitHub",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
+                {["Linux", "Git & GitHub"].map(t => <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
                     <span>{t}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </NeonCard>
 
             <NeonCard className="p-6">
               <p className="text-xs text-muted-foreground">Soft Skills</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {[
-                  "Communication",
-                  "First Principle Thinkings",
-                  "Problem Breakdown",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
+                {["Communication", "First Principle Thinkings", "Problem Breakdown"].map(t => <li key={t} className="flex items-start gap-2">
                     <span className="text-neon-green">*</span>
                     <span>{t}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </NeonCard>
           </div>
@@ -163,18 +138,9 @@ const Index = () => {
             <div className="mt-5">
               <p className="text-xs text-muted-foreground">Fun Facts</p>
               <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  "My Music playlist is heavier than my backend logic",
-                  "Coffee doesn't wake me up. A compilation error does",
-                  "I Am More of a Lazy Guy",
-                ].map((t) => (
-                  <div
-                    key={t}
-                    className="rounded-xl border bg-background/30 p-4 text-sm text-muted-foreground transition hover:neon-ring"
-                  >
+                {["My Music playlist is heavier than my backend logic", "Coffee doesn't wake me up. A compilation error does", "I Am More of a Lazy Guy"].map(t => <div key={t} className="rounded-xl border bg-background/30 p-4 text-sm text-muted-foreground transition hover:neon-ring">
                     <span className="text-neon-green">*</span> {t}
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -204,22 +170,21 @@ const Index = () => {
             </NeonCard>
 
             <motion.div initial={{
-            opacity: 0,
-            y: 12
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            amount: 0.4
-          }} transition={{
-            duration: 0.4
-          }} className="mx-auto w-full max-w-2xl rounded-2xl border bg-card/30 p-5">
+              opacity: 0,
+              y: 12
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              amount: 0.4
+            }} transition={{
+              duration: 0.4
+            }} className="mx-auto w-full max-w-2xl rounded-2xl border bg-card/30 p-5">
               <p className="text-xs text-muted-foreground">terminal</p>
-              <p className="mt-3 text-sm">
-                <span className="text-neon-green">$</span> echo "Let’s build something that matters."
+              <p className="mt-3 text-sm">$ echo "Let’s build something that matters !"<span className="text-neon-green">$</span> echo "Let’s build something that matters."
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">Let’s build something that matters.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Let’s build something that matters !</p>
               <button type="button" onClick={() => scrollTo("home")} className="mt-5 w-full rounded-lg border bg-secondary/40 px-4 py-2 text-sm text-muted-foreground transition hover:neon-ring hover:text-foreground">
                 Back to top
               </button>

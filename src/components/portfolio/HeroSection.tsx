@@ -96,7 +96,7 @@ export function HeroSection({
                 </div>
                 <div className="rounded-lg border bg-background/30 p-3">
                   <p className="text-foreground">interest</p>
-                  <p>Seeking</p>
+                  <p>Exploring</p>
                 </div>
               </div>
             </div>
