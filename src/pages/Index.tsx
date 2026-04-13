@@ -19,7 +19,9 @@ const Index = () => {
       }
       tag.setAttribute("content", content);
     };
-    ensureMeta("description", "Cyber-hacker style personal portfolio for Manthan Darji — projects, skills, achievements, and contact.");
+    
+    ensureMeta("description", "Manthan Darji - Computer Engineer and Tech Enthusiast focusing on System Architecture and Gen-AI through First Principles Thinking.");
+
   }, []);
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
