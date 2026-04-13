@@ -50,7 +50,7 @@ const Index = () => {
             <NeonCard>
               <p className="text-xs text-muted-foreground">milestone</p>
               <h3 className="mt-2 text-base font-semibold">
-                Google Student Ambassador <span className="text-neon-green">(Completed)</span>
+                ✦ Google Student Ambassador <span className="text-neon-green">(Completed)</span>
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">Built community, learned leadership, shipped initiatives , and stepped out of my comfort zone.</p>
             </NeonCard>
@@ -129,7 +129,7 @@ const Index = () => {
                 the core.
                 <br />
                 <br />
-                I am driven by a relentless curiosity in tech—whether it's System Architecture or
+                I am driven by a relentless curiosity in tech - whether it's System Architecture or
                 Gen-AI, I dig deep until I find the “why” behind the “how”. I don't settle for “it
                 works”. I need to know why it works.
               </p>
@@ -160,7 +160,7 @@ const Index = () => {
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-lg border bg-background/30 p-4">
                   <p className="text-xs text-muted-foreground">Email</p>
-                  <a className="mt-2 block text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan22@gmail.com</a>
+                  <a className="mt-2 block text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan0143@gmail.com</a>
                 </div>
                 <div className="rounded-lg border bg-background/30 p-4">
                   <p className="text-xs text-muted-foreground">Discord</p>
