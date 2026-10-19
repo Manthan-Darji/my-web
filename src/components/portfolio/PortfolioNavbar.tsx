@@ -27,6 +27,7 @@ function scrollToId(id: string) {
 }
 export function PortfolioNavbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
     onScroll();
@@ -36,7 +37,7 @@ export function PortfolioNavbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return <div className="fixed inset-x-0 top-0 z-50">
-    <div className="container">
+    <div className="container relative">
       <motion.header initial={{
         opacity: 0,
         y: -10
@@ -61,11 +62,19 @@ export function PortfolioNavbar() {
             </button>)}
           </nav>
 
-          <div className="md:hidden text-xs text-muted-foreground">
+          <button type="button" onClick={() => setOpen(o => !o)} aria-expanded={open} aria-label="Toggle menu" className="md:hidden rounded-md px-2 py-1 text-xs text-muted-foreground transition hover:text-foreground">
             <span className="text-neon-green">/</span> menu
-          </div>
+          </button>
         </div>
       </motion.header>
+      {open ? <div className="md:hidden absolute inset-x-8 top-full mt-2 rounded-xl border bg-background/95 p-2 shadow-xl backdrop-blur">
+          {links.map(l => <button key={l.id} type="button" onClick={() => {
+          setOpen(false);
+          scrollToId(l.id);
+        }} className="block w-full rounded-md px-3 py-2.5 text-left text-sm text-muted-foreground transition hover:text-foreground hover:neon-ring">
+              {l.label}
+            </button>)}
+        </div> : null}
     </div>
   </div>;
 }
