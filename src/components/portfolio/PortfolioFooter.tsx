@@ -16,7 +16,7 @@ export function PortfolioFooter() {
             © 2026. Made by <span className="text-foreground">Manthan</span>.
           </p>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {socials.map((s) => (
               <a
                 key={s.label}
