@@ -160,7 +160,7 @@ const Index = () => {
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-lg border bg-background/30 p-4">
                   <p className="text-xs text-muted-foreground">Email</p>
-                  <a className="mt-2 block text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan0143@gmail.com</a>
+                  <a className="mt-2 block break-all text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan0143@gmail.com</a>
                 </div>
                 <div className="rounded-lg border bg-background/30 p-4">
                   <p className="text-xs text-muted-foreground">Discord</p>
