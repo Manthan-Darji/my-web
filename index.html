@@ -27,11 +27,27 @@
   <meta name="twitter:title" content="Manthan D.">
   <meta property="og:description" content="This Is A Portfolio Web Of Me .">
   <meta name="twitter:description" content="This Is A Portfolio Web Of Me .">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4YRC3S20V"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B4YRC3S20V');
+</script>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href$=".pdf"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'pdf_click', { file_name: a.getAttribute('href') });
+  }
+});
+</script>
 </body>
 
 </html>
