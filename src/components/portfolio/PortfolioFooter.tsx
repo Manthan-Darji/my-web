@@ -13,7 +13,13 @@ export function PortfolioFooter() {
       <div className="container">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted-foreground">
-            © 2026. Made by <span className="text-foreground">Manthan</span>.
+            © 2026. Made by <span className="text-foreground">Manthan Darji</span>.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            My permanent home on the web:{" "}
+            <a className="text-foreground underline" href="https://manthan-darji.github.io/">
+              manthan-darji.github.io
+            </a>
           </p>
 
           <div className="flex flex-wrap items-center gap-2">
