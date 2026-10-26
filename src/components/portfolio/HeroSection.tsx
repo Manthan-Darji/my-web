@@ -59,7 +59,7 @@ export function HeroSection({
             duration: 0.55,
             delay: 0.38
           }} className="mt-10 border-l-2 border-neon-purple/50 pl-4 text-sm text-muted-foreground">
-              “Code is Cheap. Prove it's Secure.” <span className="text-foreground">- Someone Like Me</span>
+              “Code is Cheap. Prove it's Secure.” <span className="text-foreground">— Someone Like Me</span>
             </motion.blockquote>
           </div>
 
