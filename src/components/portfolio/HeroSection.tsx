@@ -7,7 +7,7 @@ export function HeroSection({
 }) {
   return <section id="home" className="pt-28 sm:pt-32">
       <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid items-center gap-10 min-[900px]:grid-cols-[1.2fr_0.8fr]">
           <div>
             <motion.div initial={{
             opacity: 0,
