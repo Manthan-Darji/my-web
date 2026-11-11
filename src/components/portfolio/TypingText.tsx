@@ -52,7 +52,7 @@ export function TypingText({
       {showCaret ? (
         <span
           aria-hidden
-          className="ml-1 inline-block h-[1em] w-[0.6ch] translate-y-[0.12em] bg-foreground/80 align-baseline animate-caret-blink"
+          className="ml-1 inline-block h-[1em] w-[0.6ch] translate-y-[0.12em] bg-neon-green align-baseline animate-caret-blink"
         />
       ) : null}
     </Tag>

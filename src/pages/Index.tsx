@@ -1,11 +1,119 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { HeroSection } from "@/components/portfolio/HeroSection";
-import { NeonCard } from "@/components/portfolio/NeonCard";
 import { PortfolioFooter } from "@/components/portfolio/PortfolioFooter";
 import { PortfolioNavbar } from "@/components/portfolio/PortfolioNavbar";
 import { Section } from "@/components/portfolio/Section";
 import { usePointerGlow } from "@/components/portfolio/usePointerGlow";
+
+const timeline = [
+  {
+    date: "AUG 2026",
+    title: "ShadowFox — Cybersecurity Intern",
+    tag: "internship",
+    points: [
+      <>
+        <span className="hl">One-month virtual internship</span>
+      </>,
+      "Attack-surface recon, network traffic and protocol auditing",
+      "Binary inspection, cryptanalysis, credential security, privilege escalation",
+    ],
+  },
+  {
+    date: "JUN 2026",
+    title: "Responsible Disclosure",
+    tag: "security",
+    points: [
+      <>
+        <span className="hl">Two high-severity vulnerabilities</span> reported through
+        formal channels
+      </>,
+      "Technical details stay private while the report is under review",
+    ],
+  },
+  {
+    date: "FEB 2026",
+    title: "AI Innovation Challenge — 4th Statewide",
+    tag: "hackathon",
+    points: [
+      "NxVoy, AI travel agent",
+      <>
+        Placed <span className="hl">4th statewide</span> at i-HUB Ahmedabad
+      </>,
+      "35 shortlisted teams from 100+ submissions",
+    ],
+  },
+  {
+    date: "2025 — 2026",
+    title: "Google Student Ambassador",
+    tag: "community",
+    points: [
+      "Built community, learned leadership, shipped initiatives",
+      "Stepped out of my comfort zone",
+      <>
+        <span className="hl">Google x PING Network</span>, GEC Rajkot
+      </>,
+    ],
+  },
+];
+
+const skillGroups: {
+  label: string;
+  tiles: { name: string; icon: string; white?: boolean }[];
+}[] = [
+  {
+    label: "Cybersecurity",
+    tiles: [
+      { name: "Burp Suite", icon: "burpsuite.svg", white: true },
+      { name: "OWASP ZAP", icon: "owasp-zap.png" },
+      { name: "Metasploit", icon: "Metasploit.svg" },
+      { name: "Kali Linux", icon: "kali-linux.svg" },
+      { name: "Wireshark", icon: "wireshark.png" },
+      { name: "OWASP", icon: "OWASP.svg" },
+      { name: "Nmap", icon: "nmap-official.svg" },
+      { name: "OWASP Top 10", icon: "mdi-shield-check.svg" },
+    ],
+  },
+  {
+    label: "Gen-AI",
+    tiles: [
+      { name: "OpenAI", icon: "openai.svg", white: true },
+      { name: "Anthropic", icon: "anthropic.svg" },
+      { name: "Prompt Eng.", icon: "mdi-chat-processing.svg" },
+      { name: "LLMs", icon: "mdi-brain.svg" },
+      { name: "AI Agents", icon: "mdi-robot.svg" },
+      { name: "MCP", icon: "mcp-white.png" },
+      { name: "RAG", icon: "mdi-database-search.svg" },
+    ],
+  },
+  {
+    label: "Languages",
+    tiles: [
+      { name: "Python", icon: "python.svg" },
+      { name: "C", icon: "c.svg" },
+      { name: "Java", icon: "java.svg" },
+      { name: "JavaScript", icon: "javascript.svg" },
+      { name: "HTML5", icon: "html5.svg" },
+      { name: "CSS3", icon: "css3.svg" },
+      { name: "SQL", icon: "mdi-database.svg" },
+      { name: "Bash", icon: "Bash.svg" },
+    ],
+  },
+  {
+    label: "Systems & Tools",
+    tiles: [
+      { name: "Linux", icon: "linux.svg" },
+      { name: "Git", icon: "git.svg" },
+      { name: "GitHub", icon: "github-white.svg" },
+      { name: "Node.js", icon: "nodejs.svg" },
+      { name: "React", icon: "React.svg" },
+      { name: "TCP/IP", icon: "mdi-lan.svg" },
+      { name: "DNS", icon: "mdi-dns.svg" },
+      { name: "TLS", icon: "mdi-shield-lock.svg" },
+    ],
+  },
+];
+
 const Index = () => {
   usePointerGlow();
   useEffect(() => {
@@ -19,9 +127,8 @@ const Index = () => {
       }
       tag.setAttribute("content", content);
     };
-    
-    ensureMeta("description", "Manthan Darji - Computer Engineer and Tech Enthusiast focusing on System Architecture and Gen-AI through First Principles Thinking.");
 
+    ensureMeta("description", "Manthan Darji, Computer Engineering student at GEC Rajkot, betting on AI & CyberSecurity. ShadowFox intern, builder of Arc-Scan and NxVoy.");
   }, []);
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -45,83 +152,118 @@ const Index = () => {
       <main>
         <HeroSection onContact={() => scrollTo("contacts")} />
 
-        <Section id="achievements" title="Achievements" kicker="proof-of-work">
-          <div className="grid gap-4 md:grid-cols-2">
-            <NeonCard>
-              <p className="text-xs text-muted-foreground">milestone</p>
-              <h3 className="mt-2 text-base font-semibold">
-                ✦ Google Student Ambassador <span className="text-neon-green">(Completed)</span>
+        <Section id="achievements" num="01" title="Achievements" kicker="Checkpoint 01 — proof-of-work">
+          <div className="tl">
+            {timeline.map((t) => (
+              <div className="tl-item" key={t.date}>
+                <span className="tl-dot" />
+                <span className="tl-date">{t.date}</span>
+                <div className="tl-card glass">
+                  <h3>
+                    {t.title} <span className="tag">{t.tag}</span>
+                  </h3>
+                  <ul className="pts">
+                    {t.points.map((p, i) => (
+                      <li key={i}>{p}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="works" num="02" title="Projects" kicker="Checkpoint 02 — building-in-public">
+          <p className="status">
+            Status: <b>Shipped.</b>
+          </p>
+          <div className="grid2">
+            <a className="brutal" href="https://github.com/Manthan-Darji/Arc-Scan" target="_blank" rel="noopener">
+              <h3>
+                Arc-Scan <span className="ext">↗ GitHub</span>
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">Built community, learned leadership, shipped initiatives , and stepped out of my comfort zone.</p>
-            </NeonCard>
+              <ul className="pts">
+                <li>Terminal-based scanner for authorized network assessments</li>
+                <li>Host discovery, concurrent TCP port scanning, service and banner detection, TLS checks</li>
+                <li>Structured reports: terminal, JSON, CSV, XML</li>
+              </ul>
+              <p className="tech">
+                <b>Python · Asyncio · TCP/IP · TLS</b> — 2026
+              </p>
+            </a>
+            <a className="brutal" href="https://github.com/Manthan-Darji/nxvoy" target="_blank" rel="noopener">
+              <h3>
+                NxVoy, AI Travel Agent <span className="ext">↗ GitHub</span>
+              </h3>
+              <ul className="pts">
+                <li>AI agent for dynamic travel planning</li>
+                <li>
+                  <span className="hl">4th statewide</span>, AI Innovation Challenge 2026,
+                  i-HUB Ahmedabad
+                </li>
+              </ul>
+              <p className="tech">
+                <b>Python · LLMs · AI Agents</b> — Feb 2026
+              </p>
+            </a>
           </div>
         </Section>
 
-        <Section id="works" title="Projects" kicker="building-in-public">
-          <div className="mb-5 text-sm text-muted-foreground">
-            Status: <span className="text-neon-purple">Working On It....</span>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <NeonCard>
-              <h3 className="text-base font-semibold">Portfolio</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Work Under Construction 🚧</p>
-            </NeonCard>
-            <NeonCard>
-              <h3 className="text-base font-semibold">Small Projects</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Work Under Construction 🚧</p>
-            </NeonCard>
-          </div>
-        </Section>
-
-        <Section id="skills" title="Skills" kicker="stack">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <NeonCard className="p-6">
-              <p className="text-xs text-muted-foreground">Gen-AI</p>
-              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["Prompt Engineering", "LLMs", "AI App Building"].map(t => <li key={t} className="flex items-start gap-2">
-                    <span className="text-neon-green">*</span>
-                    <span>{t}</span>
-                  </li>)}
-              </ul>
-            </NeonCard>
-
-            <NeonCard className="p-6">
-              <p className="text-xs text-muted-foreground">Core</p>
-              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["C Prog.", "Python", "Java"].map(t => <li key={t} className="flex items-start gap-2">
-                    <span className="text-neon-green">*</span>
-                    <span>{t}</span>
-                  </li>)}
-              </ul>
-            </NeonCard>
-
-            <NeonCard className="p-6">
-              <p className="text-xs text-muted-foreground">Systems</p>
-              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["Linux", "Git & GitHub"].map(t => <li key={t} className="flex items-start gap-2">
-                    <span className="text-neon-green">*</span>
-                    <span>{t}</span>
-                  </li>)}
-              </ul>
-            </NeonCard>
-
-            <NeonCard className="p-6">
-              <p className="text-xs text-muted-foreground">Soft Skills</p>
-              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {["Communication", "First Principle Thinkings", "Problem Breakdown"].map(t => <li key={t} className="flex items-start gap-2">
-                    <span className="text-neon-green">*</span>
-                    <span>{t}</span>
-                  </li>)}
-              </ul>
-            </NeonCard>
+        <Section id="skills" num="03" title="Stack" kicker="Checkpoint 03 — stack">
+          {skillGroups.map((g) => (
+            <div className="stack-group glass" key={g.label}>
+              <p className="label">
+                <b>//</b> {g.label}
+              </p>
+              <div className="tiles">
+                {g.tiles.map((t) => (
+                  <div className="tile" key={t.name}>
+                    <img
+                      src={`/icons/${t.icon}`}
+                      alt={t.name}
+                      loading="lazy"
+                      className={t.white ? "w" : undefined}
+                    />
+                    <span>{t.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div className="stack-group glass">
+            <p className="label">
+              <b>//</b> Soft Skills
+            </p>
+            <div className="chips">
+              {["Communication", "First Principle Thinking", "Problem Breakdown"].map((t) => (
+                <span className="chip" key={t}>
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
         </Section>
 
-        <Section id="about" title="About Me" kicker="first-principles">
-          <div className="mx-auto max-w-4xl">
-            <NeonCard className="p-6">
-              <p className="text-sm leading-relaxed text-muted-foreground text-left">
-                I don’t just write code. I question it.
+        <Section id="education" num="04" title="Education" kicker="Checkpoint 04 — where-i-study">
+          <div className="grid2">
+            <div className="edu-card glass">
+              <p className="label">2024 — 2028</p>
+              <h3>Government Engineering College, Rajkot (GTU)</h3>
+              <p>B.E. in Computer Engineering, Sem 5. Rajkot, Gujarat.</p>
+            </div>
+            <div className="edu-card glass">
+              <p className="label">2022 — 2024</p>
+              <h3>S.V. High School, Kadi</h3>
+              <p>Higher Secondary, Science. PR 90. JEE Main PR 86. Kadi, Gujarat.</p>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="about" num="05" title="About Me" kicker="Checkpoint 05 — first-principles">
+          <div className="about">
+            <div className="glass">
+              <p>
+                I don&rsquo;t just write code. I question it.
                 <br />
                 <br />
                 My approach is simple but rare: First Principles Thinking. While the herd follows
@@ -129,45 +271,49 @@ const Index = () => {
                 the core.
                 <br />
                 <br />
-                I am driven by a relentless curiosity in tech - whether it's System Architecture or
-                Gen-AI, I dig deep until I find the “why” behind the “how”. I don't settle for “it
-                works”. I need to know why it works.
+                I am driven by a relentless curiosity in tech - whether it&rsquo;s System Architecture or
+                Gen-AI, I dig deep until I find the &ldquo;why&rdquo; behind the &ldquo;how&rdquo;. I don&rsquo;t settle for &ldquo;it
+                works&rdquo;. I need to know why it works.
               </p>
-            </NeonCard>
+            </div>
 
-            <div className="mt-5">
-              <p className="text-xs text-muted-foreground">Fun Facts</p>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {["My Music playlist is heavier than my backend logic", "Coffee doesn't wake me up. A compilation error does", "I Am More of a Lazy Guy"].map(t => <div key={t} className="rounded-xl border bg-background/30 p-4 text-sm text-muted-foreground transition hover:neon-ring">
-                    <span className="text-neon-green">*</span> {t}
-                  </div>)}
+            <div className="fun">
+              <p>Fun Facts</p>
+              <div className="grid2">
+                <div className="fact">
+                  <span>*</span> My Music playlist is heavier than my backend logic
+                </div>
+                <div className="fact">
+                  <span>*</span> Coffee doesn&rsquo;t wake me up. A compilation error does
+                </div>
               </div>
             </div>
           </div>
         </Section>
 
-        <Section id="contacts" title="Contacts" kicker="ping-me">
-          <div className="mx-auto w-full max-w-4xl">
-            <div className="grid gap-4">
-            <NeonCard className="mx-auto w-full max-w-3xl p-7">
-              <p className="text-sm text-muted-foreground">
-                I’m interested in freelance opportunities. However, if you have other requests or questions, don’t hesitate to contact me.
-              </p>
-              <p className="mt-3 text-sm text-muted-foreground">
-                <span className="text-neon-purple">//</span> Always ready to team up for something that actually Matters.
+        <Section id="contacts" num="06" title="Contacts" kicker="Checkpoint 06 — ping-me">
+          <div className="contact">
+            <div className="glass">
+              <ul className="pts">
+                <li>Open to freelance opportunities.</li>
+                <li>Other requests or questions? Just ping me.</li>
+              </ul>
+              <p>
+                <span className="slash">//</span> Always ready to team up for something that
+                actually Matters.
               </p>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-lg border bg-background/30 p-4">
-                  <p className="text-xs text-muted-foreground">Email</p>
-                  <a className="mt-2 block break-all text-sm text-foreground hover:text-neon-green" href="mailto:solankimanthan0143@gmail.com">solankimanthan0143@gmail.com</a>
+              <div className="duo">
+                <div>
+                  <p>Email</p>
+                  <a href="mailto:solankimanthan0143@gmail.com">solankimanthan0143@gmail.com</a>
                 </div>
-                <div className="rounded-lg border bg-background/30 p-4">
-                  <p className="text-xs text-muted-foreground">Discord</p>
-                  <p className="mt-2 text-sm text-foreground">manthan_darji</p>
+                <div>
+                  <p>Discord</p>
+                  <span className="val">manthan_darji</span>
                 </div>
               </div>
-            </NeonCard>
+            </div>
 
             <motion.div initial={{
               opacity: 0,
@@ -180,15 +326,14 @@ const Index = () => {
               amount: 0.4
             }} transition={{
               duration: 0.4
-            }} className="mx-auto w-full max-w-2xl rounded-2xl border bg-card/30 p-5">
-              <p className="text-xs text-muted-foreground">terminal</p>
-              <p className="mt-3 text-sm">$ echo "Let’s build something that matters !"</p>
-              <p className="mt-2 text-sm text-muted-foreground">Let’s build something that matters !</p>
-              <button type="button" onClick={() => scrollTo("home")} className="mt-5 w-full rounded-lg border bg-secondary/40 px-4 py-2 text-sm text-muted-foreground transition hover:neon-ring hover:text-foreground">
+            }} className="term">
+              <p>terminal</p>
+              <p>$ echo &ldquo;Let&rsquo;s build something that matters !&rdquo;</p>
+              <p className="term-out">Let&rsquo;s build something that matters !</p>
+              <button type="button" onClick={() => scrollTo("home")} className="back">
                 Back to top
               </button>
             </motion.div>
-            </div>
           </div>
         </Section>
       </main>

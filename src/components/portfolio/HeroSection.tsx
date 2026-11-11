@@ -22,7 +22,7 @@ export function HeroSection({
               <span>Hi, I Am</span>
             </motion.div>
 
-            <TypingText as="h1" text="Manthan Darji" className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl" speedMs={36} />
+            <TypingText as="h1" text="Manthan Darji" className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-6xl" speedMs={36} />
 
             <motion.p initial={{
             opacity: 0,
@@ -33,7 +33,7 @@ export function HeroSection({
           }} transition={{
             duration: 0.45,
             delay: 0.18
-          }} className="mt-4 max-w-xl text-base text-muted-foreground sm:text-lg">- CSE Student | Tech Enthusiast | Learner</motion.p>
+          }} className="mt-4 max-w-xl text-base text-muted-foreground sm:text-lg">- CSE Student | AI & CyberSecurity | Tech Enthusiast | Builder</motion.p>
 
             <motion.div initial={{
             opacity: 0,
@@ -92,11 +92,11 @@ export function HeroSection({
               <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-muted-foreground">
                 <div className="rounded-lg border bg-background/30 p-3">
                   <p className="text-foreground">focus</p>
-                  <p>System Architecture</p>
+                  <p>AI & CyberSecurity</p>
                 </div>
                 <div className="rounded-lg border bg-background/30 p-3">
-                  <p className="text-foreground">interest</p>
-                  <p>Exploring</p>
+                  <p className="text-foreground">Curious About</p>
+                  <p>Exploring Tech</p>
                 </div>
               </div>
             </div>

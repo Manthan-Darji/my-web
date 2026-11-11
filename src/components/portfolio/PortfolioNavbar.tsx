@@ -2,17 +2,20 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 const links = [{
-  label: "Home",
-  id: "home"
-}, {
-  label: "Works",
-  id: "works"
-}, {
-  label: "About Me",
-  id: "about"
-}, {
   label: "Achievements",
   id: "achievements"
+}, {
+  label: "Projects",
+  id: "works"
+}, {
+  label: "Stack",
+  id: "skills"
+}, {
+  label: "Education",
+  id: "education"
+}, {
+  label: "About",
+  id: "about"
 }, {
   label: "Contacts",
   id: "contacts"

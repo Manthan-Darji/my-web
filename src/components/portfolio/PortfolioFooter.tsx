@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, MessageSquare } from "lucide-react";
+import { Github, Home, Instagram, Linkedin, MessageSquare } from "lucide-react";
 
 const socials = [
   { label: "Discord", href: "https://bit.ly/Manthan_Discord", icon: MessageSquare },
@@ -15,12 +15,15 @@ export function PortfolioFooter() {
           <p className="text-sm text-muted-foreground">
             © 2026. Made by <span className="text-foreground">Manthan Darji</span>.
           </p>
-          <p className="text-sm text-muted-foreground">
-            My permanent home on the web:{" "}
-            <a className="text-foreground underline" href="https://manthan-darji.github.io/">
-              manthan-darji.github.io
-            </a>
-          </p>
+          <a className="home-link" href="https://manthan-darji.github.io/">
+            <span className="home-ic">
+              <Home className="h-7 w-7 text-neon-purple" />
+            </span>
+            <span className="home-txt">
+              <span>My permanent home on the web</span>
+              <b>manthan-darji.github.io ↗</b>
+            </span>
+          </a>
 
           <div className="flex flex-wrap items-center gap-2">
             {socials.map((s) => (
