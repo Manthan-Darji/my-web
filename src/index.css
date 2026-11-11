@@ -200,6 +200,41 @@ All colors MUST be HSL.
   color: hsl(var(--primary-2));
   font-weight: 700;
 }
+.btn-brutal {
+  display: inline-block;
+  background: hsl(var(--primary-2));
+  color: #04120a;
+  border: 2px solid #04120a;
+  border-radius: 10px;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 hsl(var(--primary));
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+  cursor: pointer;
+}
+.btn-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 hsl(var(--primary));
+}
+.btn-brutal:active {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 hsl(var(--primary));
+}
+.tag {
+  font-family: "Fira Code", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
 /* timeline */
 .tl {
   position: relative;

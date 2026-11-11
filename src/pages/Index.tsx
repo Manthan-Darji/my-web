@@ -143,7 +143,7 @@ const Index = () => {
         <div className="absolute inset-0 cyber-grid" />
         <div className="absolute inset-0 scanlines" />
         <div className="absolute inset-0" style={{
-        background: "radial-gradient(700px circle at var(--mx, 20%) var(--my, 10%), hsl(var(--primary)/0.18), transparent 55%), radial-gradient(500px circle at calc(var(--mx, 20%) + 120px) calc(var(--my, 10%) + 160px), hsl(var(--primary-2)/0.12), transparent 60%)"
+        background: "radial-gradient(600px circle at var(--mx, 18%) var(--my, 8%), hsl(var(--primary)/0.16), transparent 55%), radial-gradient(420px circle at 85% 30%, hsl(var(--primary-2)/0.08), transparent 60%)"
       }} />
       </div>
 
@@ -247,14 +247,20 @@ const Index = () => {
         <Section id="education" num="04" title="Education" kicker="Checkpoint 04 — where-i-study">
           <div className="grid2">
             <div className="edu-card glass">
-              <p className="label">2024 — 2028</p>
-              <h3>Government Engineering College, Rajkot (GTU)</h3>
-              <p>B.E. in Computer Engineering, Sem 5. Rajkot, Gujarat.</p>
+              <p className="label">
+                2024 — 2028 <span className="tag">SEM 5</span>
+              </p>
+              <h3>Govt. Engr. College, Rajkot</h3>
+              <p>BE in Computer Engineering</p>
             </div>
             <div className="edu-card glass">
               <p className="label">2022 — 2024</p>
               <h3>S.V. High School, Kadi</h3>
-              <p>Higher Secondary, Science. PR 90. JEE Main PR 86. Kadi, Gujarat.</p>
+              <p>
+                HSE - Science. PR - 90.
+                <br />
+                JEE (Mains) - 86.
+              </p>
             </div>
           </div>
         </Section>

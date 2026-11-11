@@ -45,7 +45,7 @@ export function HeroSection({
             duration: 0.45,
             delay: 0.28
           }} className="mt-7 flex flex-wrap items-center gap-3">
-              <button type="button" onClick={onContact} className="rounded-lg border bg-card/60 px-5 py-2.5 text-sm font-medium text-foreground neon-ring transition-transform duration-200 hover:-translate-y-0.5">
+              <button type="button" onClick={onContact} className="btn-brutal">
                 Contact Me
               </button>
               
