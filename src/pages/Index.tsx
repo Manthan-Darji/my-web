@@ -248,18 +248,18 @@ const Index = () => {
           <div className="grid2">
             <div className="edu-card glass">
               <p className="label">
-                2024 — 2028 <span className="tag">SEM 5</span>
+                2024 — 2028 <span className="tag g">SEM 5</span>
               </p>
               <h3>Govt. Engr. College, Rajkot</h3>
-              <p>BE in Computer Engineering</p>
+              <p>BE in Computer Engineering (GTU)</p>
             </div>
             <div className="edu-card glass">
               <p className="label">2022 — 2024</p>
               <h3>S.V. High School, Kadi</h3>
               <p>
-                HSE - Science. PR - 90.
+                HSE - Science. <span className="hl">PR - 90.</span>
                 <br />
-                JEE (Mains) - 86.
+                JEE (Mains) - <span className="hl">86.</span>
               </p>
             </div>
           </div>

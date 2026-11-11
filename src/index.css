@@ -235,6 +235,10 @@ All colors MUST be HSL.
   margin-left: 6px;
   vertical-align: middle;
 }
+.tag.g {
+  color: hsl(var(--primary-2));
+  border-color: hsl(var(--primary-2) / 0.5);
+}
 /* timeline */
 .tl {
   position: relative;
