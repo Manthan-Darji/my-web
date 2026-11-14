@@ -11,7 +11,7 @@ const timeline = [
     date: "AUG 2026",
     title: "ShadowFox — Cybersecurity Intern",
     tag: "internship",
-    link: "https://lnkd.in/p/d9v72xr2",
+    link: "https://lnkd.in/p/dc_qQH9Z",
     points: [
       <>
         <span className="hl">One-month virtual internship</span>
@@ -37,7 +37,7 @@ const timeline = [
     date: "FEB 2026",
     title: "AI Innovation Challenge — 4th Statewide",
     tag: "hackathon",
-    link: "https://lnkd.in/p/d9v72xr2",
+    link: "https://lnkd.in/p/d94Hbq7p",
     points: [
       "NxVoy, AI travel agent",
       <>
