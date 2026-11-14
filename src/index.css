@@ -295,6 +295,7 @@ All colors MUST be HSL.
   background: hsl(var(--primary-2) / 0.07);
 }
 .tl-card {
+  position: relative;
   margin-top: 10px;
   padding: 18px 20px;
 }
@@ -302,16 +303,31 @@ All colors MUST be HSL.
   font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   margin: 0;
+  padding-right: 72px;
 }
 .tl-card h3 .tag {
   font-family: "Fira Code", ui-monospace, Menlo, Consolas, monospace;
   font-size: 11px;
-  color: hsl(var(--muted-foreground));
-  border: 1px solid hsl(var(--border));
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--primary) / 0.5);
   border-radius: 999px;
   padding: 2px 8px;
   margin-left: 6px;
   vertical-align: middle;
+}
+.tl-link {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-family: "Fira Code", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(var(--primary-2));
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tl-link:hover {
+  text-decoration: underline;
 }
 /* projects: neo-brutalist */
 .status {
@@ -494,7 +510,8 @@ All colors MUST be HSL.
   color: hsl(var(--primary));
 }
 .contact .duo {
-  margin-top: 22px;
+  margin: 22px auto 0;
+  max-width: 560px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -503,8 +520,9 @@ All colors MUST be HSL.
   border: 1px solid hsl(var(--border));
   border-radius: 10px;
   background: rgba(10, 10, 10, 0.35);
-  padding: 16px;
+  padding: 18px 16px;
   min-width: 0;
+  text-align: center;
 }
 .contact .duo p {
   margin: 0;

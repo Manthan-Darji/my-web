@@ -11,6 +11,7 @@ const timeline = [
     date: "AUG 2026",
     title: "ShadowFox — Cybersecurity Intern",
     tag: "internship",
+    link: "https://lnkd.in/p/d9v72xr2",
     points: [
       <>
         <span className="hl">One-month virtual internship</span>
@@ -23,6 +24,7 @@ const timeline = [
     date: "JUN 2026",
     title: "Responsible Disclosure",
     tag: "security",
+    link: "https://lnkd.in/p/d9v72xr2",
     points: [
       <>
         <span className="hl">Two high-severity vulnerabilities</span> reported through
@@ -35,6 +37,7 @@ const timeline = [
     date: "FEB 2026",
     title: "AI Innovation Challenge — 4th Statewide",
     tag: "hackathon",
+    link: "https://lnkd.in/p/d9v72xr2",
     points: [
       "NxVoy, AI travel agent",
       <>
@@ -47,6 +50,7 @@ const timeline = [
     date: "2025 — 2026",
     title: "Google Student Ambassador",
     tag: "community",
+    link: "https://lnkd.in/p/d_TmqU_m",
     points: [
       "Built community, learned leadership, shipped initiatives",
       "Stepped out of my comfort zone",
@@ -159,6 +163,9 @@ const Index = () => {
                 <span className="tl-dot" />
                 <span className="tl-date">{t.date}</span>
                 <div className="tl-card glass">
+                  <a className="tl-link" href={t.link} target="_blank" rel="noopener noreferrer" aria-label={`${t.title} — LinkedIn post`}>
+                    ↗ Link
+                  </a>
                   <h3>
                     {t.title} <span className="tag">{t.tag}</span>
                   </h3>
@@ -259,7 +266,7 @@ const Index = () => {
               <p>
                 HSE - Science. <span className="hl">PR - 90.</span>
                 <br />
-                JEE (Mains) - <span className="hl">86.</span>
+                <span className="hl">JEE (Mains) - 86.</span>
               </p>
             </div>
           </div>
