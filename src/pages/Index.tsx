@@ -31,6 +31,14 @@ const timeline = [
         formal channels
       </>,
       "Technical details stay private while the report is under review",
+      <>
+        <span className="hl">Vendor notified first</span>, shared publicly only
+        after the fix
+      </>,
+      <>
+        <span className="hl">Fix verified</span>, the issue is closed on the live
+        system
+      </>,
     ],
   },
   {
